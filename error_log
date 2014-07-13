@@ -1,0 +1,4 @@
+[26-Dec-2013 17:31:40] PHP Fatal error:  Call to undefined function  get_header() in /home2/neurome1/public_html/wp-content/themes/responsive_tabloid_1.3.2/index.php on line 1
+[25-Jan-2014 17:37:18] PHP Fatal error:  Call to undefined function  get_header() in /home2/neurome1/public_html/wp-content/themes/responsive_tabloid_1.3.2/index.php on line 1
+[26-Feb-2014 16:30:22] PHP Fatal error:  Call to undefined function  get_header() in /home2/neurome1/public_html/wp-content/themes/responsive_tabloid_1.3.3/index.php on line 1
+[12-Apr-2014 14:46:12] PHP Fatal error:  Call to undefined function  get_header() in /home2/neurome1/public_html/wp-content/themes/responsive_tabloid_1.3.3/index.php on line 1

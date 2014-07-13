@@ -1,0 +1,1297 @@
+/*
+Theme Name: Responsive Tabloid
+Theme URI: http://neuromeblog.com/
+Author: Jerome Halligan
+Author URI: http://neuromeblog.com/
+Description: A responsive news theme
+Version: 2.1
+*/
+
+/* SITEWIDE STUFF
+-------------------------------------------------------------- */
+
+body {
+font-family: 'Roboto Condensed', georgia, sans-serif;
+font-weight:300;
+color:#242424;
+margin-top:0;
+}
+
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=c33fb3d1-1908-4b1f-bdc6-e460e4a65569&fontids=1119273");
+
+@font-face{
+font-family:"CheltenhamW01-BoldItHea";
+src:url("Fonts/1119273/41fc2295-b038-4900-aca1-392084f2380c.eot?#iefix");
+src:url("Fonts/1119273/41fc2295-b038-4900-aca1-392084f2380c.eot?#iefix") format("eot"),url("Fonts/1119273/6805872e-e822-415c-a74f-9b207d5b0fc7.woff") format("woff"),url("Fonts/1119273/5d577fde-5c8a-48c7-84fe-c274feb3e08f.ttf") format("truetype"),url("Fonts/1119273/7867be7e-9c47-4eba-9f33-5c90c0857291.svg#7867be7e-9c47-4eba-9f33-5c90c0857291") format("svg");
+}
+
+h1{
+font-size:2.4em;
+font-family:"CheltenhamW01-BoldItHea", sans-serif;
+}
+
+h1{
+font-size:2.4em;
+letter-spacing: -.065em;
+}
+
+h1.entry-title{
+line-height: 1.1em;
+margin:0;
+font-weight:normal;
+font-family:"CheltenhamW01-BoldItHea", sans-serif;
+width:95%;
+}
+
+h2{
+font-size:1.2em;
+margin:1em .4em .4em 0;
+line-height:1.05em;
+letter-spacing:-.06em;
+}
+
+h3{
+margin-right:2em;
+margin-bottom:.2em;
+line-height:1.1em;
+letter-spacing:-.06em;
+}
+
+h3.archive a, h3.archive a:visited{
+text-decoration:none;
+}
+
+h4{
+letter-spacing:-.1em;
+}
+
+a, a:visited{
+color:#242424;
+text-decoration:none;
+font-weight:400;
+}
+
+a:hover{
+color:#242424;
+text-decoration:underline;
+}
+
+iframe {
+width:100%;
+}
+
+img{
+max-width:100%;
+}
+
+img.featured {
+margin-bottom:.5em;
+border:1px solid #A8A8A8;
+}
+
+ul{
+padding-left:1.1em;
+}
+
+#page {
+margin: 0 auto;
+padding: 0;
+max-width: 60em;
+}
+
+#content {
+padding-top:0;
+margin-top:9.1em;
+padding-bottom:1em;
+border-bottom:1px solid #ddd;
+width:100%;
+float:left;
+z-index: 1;
+}
+
+/* Header
+-------------------------------------------------------------- */
+
+#masthead{
+width:60em;
+float:left;
+background:#fff;
+z-index: 9999;
+position:fixed;
+border-bottom:1px solid #222;
+}
+
+#logo {
+margin-top:.2em;
+margin-right:0;
+margin-bottom:-.05em;
+margin-left:13em;
+width:14%;
+float:left;
+}
+
+#logo img{
+}
+
+#nav_left{
+width:20%;
+float:left;
+margin-top:5.2em;
+padding-bottom:0;
+margin-left:1em;
+}
+
+#nav_right{
+float:right;
+width:22.5%;
+margin-top:0;
+margin-right:0;
+}
+
+.nav_right{
+list-style-type:none;
+margin:1em 0 0 4em;
+padding:0;
+}
+
+.nav_right_search{
+list-style-type:none;
+margin-top:1.5em;
+margin-bottom:0;
+margin-left:1em;
+padding:0;
+}
+
+.nav_right li{
+display:inline-block;
+}
+
+#nav {
+list-style-type:none;
+margin:0;
+padding-left:0;
+}
+
+#nav ul.sub-nav {
+    display: none;
+}
+
+#nav ul.visible{
+display:inline;
+	list-style-type:none;
+	font-size:.7em;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+#nav ul.visible li{
+list-style-type:none;
+padding:0 1em .2em 1em;
+font-size:1.07em;
+}
+
+#nav ul.visible li:last-child{
+	padding-bottom:1em;
+}
+
+#nav ul.visible li a{
+color:#242424;
+}
+
+#nav ul.visible li ul{
+padding-left:0;
+}
+
+.parent {
+	width:30%;
+	position:absolute;
+}
+
+#drop-top{
+	border:1px solid #ddd;
+	background: #fff;
+	margin:.4em 0 0 0;
+-moz-box-shadow: 10px 10px 5px #888;
+-webkit-box-shadow: 10px 10px 5px #888;
+box-shadow: 10px 10px 5px #888;
+}
+}
+
+p.about_header{
+margin-bottom:.5em;
+color:#A8A8A8;
+font-weight:normal;
+font-size:1.07em;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#horizontal{
+float: left;
+width: 60em;
+position: fixed;
+margin-top: 7em;
+z-index: 1;
+background:#fff;
+border-bottom:3px solid #222;
+}
+
+.horiz_nav{
+list-style-type:none;
+margin: .4em 0 .4em 0;
+padding:0;
+float:left;
+clear:both;
+text-align:center;
+width:100%;
+}
+
+.horiz_nav li{
+display:inline-block;
+text-transform:uppercase;
+font-size:.7em;
+font-weight:bold;
+padding:0 3.9em;
+font-family:Oswald;
+}
+
+/* ----------------homepage-------------- */
+
+#above_fold{
+float:left;
+margin:.35em 0 0 0;
+}
+
+#top_story {
+width: 38%;
+float: left;
+margin: 1em 0 0 1em;
+padding-right: 1em;
+}
+
+#top_story h1 {
+font-size: 2em;
+padding-bottom: .5em;
+}
+
+#top_story img{
+width:100%;
+max-width:100%;
+height:auto;
+border:1px solid #ddd;
+margin-bottom:.4em;
+}
+
+#column_2 {
+width: 22.5%;
+float: left;
+margin: 1.5em .8em 0 0;
+border-right: 1px solid #ddd;
+padding-right: .5em;
+padding-left: 1em;
+border-left: 1px solid #ddd;
+}
+
+h1.home-entry-title{
+line-height: 1.1em;
+margin:0 .2em 0 0;
+font-family: "CheltenhamW01-BoldItHea", sans-serif;
+font-weight:normal;
+font-size:1.7em;
+}
+
+#top_story p{
+font-size:.9em;
+margin-bottom:0;
+}
+
+#column_2 {
+font-size:.72em;
+}
+
+.home-entry-content p{
+margin-top:.3em;
+margin-right:1.5em;
+}
+
+.home-entry-meta{
+font-size:.7em;
+margin-right:1em;
+clear: both;
+display: block;
+font-family:Arial;
+text-transform:uppercase;
+color:#a81817;
+padding-top:.5em;
+}
+
+#np-wire{
+width:31.8%;
+float:left;
+padding-top:.75em;
+padding-left:.2em;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+#np-wire h4{
+font-weight:normal;
+letter-spacing:-.05em;
+font-size:.9em;
+margin-bottom:.6em;
+}
+
+#np-wire a{
+font-weight:normal;
+}
+
+#np-wire h1{
+letter-spacing: -.06em;
+line-height: 1.1em;
+margin:0 .2em .4em 0;
+font-weight:bold;
+font-size:.95em;
+}
+
+#np-wire p {
+font-size:.66em;
+letter-spacing:-.05em;
+}
+
+#np-wire img{
+border: 1px solid #a8a8a8;
+margin: 0 0 0 .3em;
+height:auto;
+float:right;
+max-width:45%;
+height:auto;
+}
+
+#np-wire h4{
+margin-top:.2em;
+text-transform: uppercase;
+font-size: .7em;
+}
+#np-wire-top{
+}
+
+#np-wire-top h1{
+font-size:1.2em;
+}
+
+#np-wire-rest{
+clear:both;
+padding-top:.8em;
+}
+#np-wire-rest ul{
+margin:0;
+padding-left:0;
+}
+#np-wire-rest ul li{
+list-style:none;
+background-image: url('http://nationalprotrusion.com/wp-content/uploads/2014/06/dot.png');
+background-repeat:no-repeat;
+background-position-x: 0;
+background-position-y: 63%;
+padding-left: .74em;
+}
+
+#np-wire-rest h1{
+font-size:.98em;
+padding:.2em 0 0 0;
+padding-top:.65em;
+}
+
+/* ----------------Below the Fold--------------------- */
+
+#below-fold{
+padding-top:1em;
+margin-top:1em;
+margin-bottom:1em;
+border-top:1px solid #ddd;
+width:100%;
+float:left;
+clear:both;
+}
+
+#below-fold h1{
+font-size:1.2em;
+}
+
+#below-fold img{
+border: 1px solid #a8a8a8;
+margin: 0 0 1em 1em;
+float:right;
+max-width:25%;
+clear:both;
+}
+
+#below-fold .home-entry-header {
+padding: 1.6em 0 0 0;
+clear: both;
+}
+
+h4.below{
+margin-top: .2em;
+margin-bottom:0;
+text-transform: uppercase;
+font-size: .7em;
+font-weight:normal;
+letter-spacing:0;
+}
+
+#below-fold-left{
+float:left;
+width:64%;
+border-right:1px solid #ddd;
+padding-right:1.2em;
+margin-left:1em;
+}
+
+#below-fold-left p{
+font-size: 0.74em;
+margin: .4em 10em 0 0;
+}
+
+p.more_in{
+padding-top:2.2em;
+}
+
+p.more_in a{
+font-weight:bold;
+}
+
+#below-fold-left .home-entry-header{
+border-top:1px solid #ddd;
+margin-top:.4em;
+}
+
+#below-fold-right{
+float:right;
+width:29.5%;
+margin-right:1em;
+}
+
+#below-fold-right ol{
+border-top:2px solid #ddd;
+padding-left:1.3em;
+}
+
+#below-fold-right ol li{
+padding:1em 0;
+border-bottom:1px solid #ddd;
+font-size:.9em;
+margin-right:.9em;
+}
+
+#below-fold-right ol li:last-child{
+border:none;
+}
+
+/* SINGLE POST */
+
+#kicker h3{
+text-transform:uppercase;
+margin-top:0;
+margin-bottom: .6em;
+letter-spacing: 0.1em;
+color: #242424;
+font-weight:normal;
+}
+
+.post-categories {
+list-style:none;
+padding:0;
+margin:0;
+}
+
+article {
+width: 100%;
+margin: .6em auto 0 auto;
+float: left;
+}
+
+.entry-content {
+float: left;
+width: 52%;
+margin: .3em 0 0 2em;
+line-height: 1.5em;
+min-height:49em;
+}
+
+.entry-content a{
+color:#004276;
+text-decoration:underline;
+}
+
+.entry-content a:visited{
+color:#666699;
+text-decoration:underline;
+}
+
+.entry-content a:hover{
+text-decoration:underline;
+color:#004276;
+}
+
+.entry-content p {
+font-size: 1.2em;
+line-height: 1.467em;
+color: #000;
+letter-spacing: -.01em;
+margin-right: 0;
+font-weight: 300;
+}
+
+.entry-header {
+float: left;
+margin-top: 1em;
+width: 99.1%;
+border-bottom: 1px solid #222;
+padding-left: .4em;
+}
+
+.article-tags {
+float: left;
+margin-top: 3.45em;
+margin-left: 1em;
+margin-right: .8em;
+width: 14%;
+border-bottom: 5px solid #ddd;
+border-top: 5px solid #ddd;
+padding-top: .8em;
+}
+
+.article-tags ul {
+list-style:none;
+padding-left:0;
+text-transform: capitalize;
+}
+
+.article-tags ul li {
+margin-bottom:.35em;
+}
+
+.article-tags h4 {
+font-weight:normal;
+margin:0;
+letter-spacing: -.04em;
+}
+
+.text-size{
+border-top: 5px solid #ddd;
+}
+
+.choose-text-size{
+font-size:.9em;
+margin-bottom:.3em;
+}
+
+.text-choices{
+margin-top:.5em;
+}
+
+#larger-text{
+font-size:1.6em;
+padding-right:1em;
+cursor:pointer;
+}
+
+#normal-text{
+font-size:1.3em;
+padding-right:1em;
+cursor:pointer;
+}
+
+#smaller-text{
+font-size:.9em;
+padding-right:1.4em;
+cursor:pointer;
+}
+
+.related {
+display: inline-block;
+margin: 3em 0 0 3em;
+width: 21%;
+}
+
+.related ul{
+	list-style:none;
+	padding-left: 0;
+}
+
+.related ul li{
+font-size:.9em;
+margin-bottom:2em;
+}
+
+.related img{
+max-width:100%;
+height:auto;
+display:block;
+border:1px solid #ddd;
+margin-bottom: .6em;
+}
+
+.related h4, .related h4 a{
+font-weight:normal;
+margin:0;
+letter-spacing: -.04em;
+border-bottom:2px solid #ddd;
+}
+
+/* CATEGORY/TAG PAGES */
+
+.page-content {
+width: 100%;
+margin: .6em auto 0 auto;
+float: left;
+}
+
+.page-content #kicker{
+margin-bottom:2em;
+margin-top:1em;
+width: 97%;
+margin-left: 1%;
+}
+
+.page-content .entry-header{
+width:97%;
+margin-left:1%;
+}
+
+.page-content .entry-title{
+font-size:1.4em;
+}
+
+.category_nav {
+padding-top: 2em;
+display: block;
+clear: both;
+width: 80%;
+margin-left: 1%;
+}
+
+/* ANY OTHER PAGES */
+
+h1.page-title {
+width: 80%;
+margin-left: .2em;
+margin-bottom: 0;
+}
+
+
+/* Text meant only for screen readers */
+
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+.sticky {
+}
+.entry-meta {
+	clear: both;
+	display: block;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#242424;
+	padding-top: 1.3em;
+	padding-bottom: 1.2em;
+}
+
+.entry-meta a, entry-meta a:visited{
+	color:#242424;
+	font-weight:bold;
+}
+
+.single-author .entry-meta .byline {
+	display: none;
+}
+
+.nav-below {
+line-height: 1.3em;
+text-transform: none;
+margin: 2em 0 1.5em 0;
+display: block;
+overflow: hidden;
+height: 100%;
+width: 100%;
+float: left;
+}
+
+.nav-below a {
+line-height:1.1em;
+padding-top:1em;
+padding-bottom:1em;
+}
+
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+.page-link {
+	clear: both;
+	margin: 0 0 1em;
+}
+.page .edit-link {
+	clear: both;
+	display: block;
+}
+
+
+/* Images Alignment and Captions
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.widget-area img{
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+max-width:100%;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+max-width:100%;
+}
+
+.alignright_long {
+	display: inline;
+	float: right;
+	margin-left: 2em;
+width:40%  !important;
+}
+
+.alignleft_long {
+	display: inline;
+	float: left;
+	margin-right: 2em;
+width:40%  !important;
+}
+
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+max-width:100%;
+}
+
+.wp-caption {
+text-align: left;
+font-size: .7em;
+margin: .6em 1em 1em 0;
+}
+
+.wp-caption img {
+	margin: 1em 0 0 0;
+	border:1px solid #ddd;
+}
+
+.wp-caption.alignright_long{
+	display: inline;
+	float: right;
+	margin-left:3em;
+width:35% !important;
+clear:both;
+}
+
+.wp-caption.alignleft_long{
+	display: inline;
+	float: left;
+	margin-right:3em;
+width:35% !important;
+clear:both;
+}
+
+p.wp-caption-text {
+	margin: 0 1em 0 0;
+	color:#7a7a7a;
+line-height: 1.3em;
+}
+
+.gallery-caption {
+}
+.wp-smiley {
+	margin: 0;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+form{margin:0;padding:0}
+
+.search-box{ /*outer background*/
+height: 26px;
+padding: 5px 0 0 10px;
+width: 175px;
+margin:0 0 0 1.8em;
+}
+
+input.search-field{ /*input field */
+float: left;
+border:0;
+margin:0;
+font-family:tahoma;
+font-size: 12px;
+padding: 3px 0px 0px 4px;
+height:18px;
+background: #ffffff;
+width: 123px;
+}
+
+input.search-go, input.search-go:hover  { /*search icon */
+float:left;
+border:0;
+margin:0;
+padding:0;
+margin-left: 5px;
+height: 35px;
+width: 35px;
+background: url('http://nationalprotrusion.com/wp-content/uploads/2013/12/search.png') no-repeat top left;
+background-size:24px 24px;
+cursor: pointer;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+/* Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	display: block;
+}
+.widget-area .widget_search {
+	overflow: hidden;
+	padding-bottom:.6em;
+}
+.widget-area .widget_search input {
+	float: left;
+}
+
+
+/* Footer
+-------------------------------------------------------------- */
+
+#colophon {
+padding: 6em 0 1em 0;
+font-size: .8em;
+clear: both;
+display: block;
+width: 100%;
+margin-left: 1em;
+}
+
+
+/* Responsive Styles
+-------------------------------------------------------------- */
+
+@media all and (max-width: 1024px) and (min-width: 768px) {
+
+#page{
+padding-left:0;
+}
+#masthead{
+max-width:98%;
+}
+#horizontal{
+max-width:98%;
+}
+article, .page-content {
+width: 99%;
+margin-left: 1%;
+}
+.article-tags{
+margin-top: 3.45em;
+margin-left: 0;
+width: 17%;
+}
+.entry-content{
+margin-left:3%;
+}
+.entry-content p{
+font-size:1.3em;
+margin-right:0;
+}
+.wp-caption{
+max-width:100%;
+}
+.related {
+margin: 3em 0 0 1.7em;
+width: 22%;
+}
+iframe {
+width:90%;
+}
+#logo {
+margin-top: .2em;
+margin-right: 0;
+margin-bottom: -.05em;
+margin-left: 19%;
+float: left;
+width: 30%;
+}
+#nav_right{
+float:right;
+width:27.5%;
+margin-top:0;
+margin-right:0;
+}
+.nav_right{
+list-style-type:none;
+margin:1em 0 0 3em;
+padding:0;
+}
+.nav_right_search{
+list-style-type:none;
+margin-top:1.5em;
+margin-bottom:0;
+margin-left:0;
+padding:0;
+}
+#nav_left{
+margin-left:0;
+width:20%;
+}
+ul#nav{
+padding-left:0;
+width:235%;
+}
+#top_story {
+width:36%;
+}
+#top_story .home-entry-meta, #top_story .home-entry-content{
+display:none;
+}
+#column_2 .home-entry-meta {
+margin-bottom:2em;
+}
+#column_2 .home-entry-header {
+border-top:1px solid #ddd;
+padding-top:2em;
+}
+#column_2 .home-entry-header:first-child {
+border:none;
+padding-top:0;
+}
+#column_2 p{
+display:none;
+}
+#np-wire-top h1 {
+font-size: 1em;
+}
+#np-wire-rest {
+padding-top:0;
+font-size:.92em;
+}
+#below-fold-left{
+width:62%;
+}
+#below-fold-right ol li{
+font-size:.82em;
+}
+.page-content .entry-header {
+width: 97%;
+}
+}
+
+/* 767px Max
+-------------------------------------------------------------- */
+@media all and (max-width: 767px) {
+
+#content{
+margin-top:7.7em;
+border-bottom:none;
+}
+#masthead{
+border-bottom:3px solid #000;
+width:96%;
+}
+#logo {
+margin-top: .2em;
+margin-right: 0;
+margin-bottom: -.05em;
+margin-left: 26%;
+width: 35%;
+float: left;
+}
+.parent{
+width:62%;
+font-size:.8em;
+display:block;
+}
+p.about_header{
+display:none;
+}
+.explore-left, .explore-right{
+padding-top:.5em;
+}
+.connect{
+display:none;
+}
+#nav_right{
+display:none;
+}
+.search-box{
+margin:0 0 0 1em;
+}
+#nav_left{
+margin-left:0;
+width:10%;
+}
+ul#nav{
+padding-left:0;
+width:10%;
+}
+#nav ul.visible{
+font-size:1.4em;
+}
+#nav ul.visible li{
+width:80%;
+}
+#nav ul.visible li:last-child{
+display:inline-block;
+}
+.explore-right{
+padding-top:1em;
+float:right;
+width:50%;
+}
+.explore-left{
+padding-top:1em;
+float:left;
+width:50%;
+}
+#horizontal{
+display:none;
+}
+#top_story{
+width:95%;
+border-bottom:1px solid #ddd;
+padding:0 0 .36em 0;
+margin:.3em .8em 0 .4em;
+}
+#top_story h1{
+border:none;
+padding-top:0;
+font-size:1.6em;
+}
+h1.home-entry-title{
+font-weight:normal;
+padding-top:1em;
+padding-bottom:1em;
+margin-right:.6em;
+border:none;
+}
+#top_story img{
+max-width:99%;
+}
+.home-entry-header{
+border-top:1px solid #ddd;
+margin-right:0;
+}
+.home-entry-header-top {
+border:none; 
+}
+h1.entry-title{
+font-size:2em;
+margin-right:0;
+width:100%;
+}
+.home-entry-content p{
+display:none;
+}
+.home-entry-meta {
+display:none;
+}
+#column_2{
+width:95%;
+border:none;
+padding:0;
+margin: 0 .8em 0 .4em;
+}
+#np-wire{
+margin:0 0 0 .4em;
+width:95%;
+float:none;
+clear:both;
+}
+#np-wire img{
+max-width:41%;
+margin: 1em 0 1em 1em;
+}
+#np-wire h1{
+font-size:1.1em;
+margin-right:.6em;
+}
+#np-wire p{
+font-size:.76em;
+}
+#np-wire-top{
+padding:0;
+margin-right:.6em;
+}
+#np-wire-top h1{
+font-size:1.2em;
+border:none;
+padding-top:0;
+padding-bottom:0;
+margin-top:1em;
+margin-bottom:0;
+}
+#np-wire-rest{
+padding-top:.6em;
+margin-right:.6em;
+}
+#np-wire-rest h1 {
+font-size: 1.2em;
+padding: 1em 0 1em 0;
+border-top:1px solid #ddd;
+margin-bottom:0;
+margin-right:0;
+}
+#np-wire h4{
+display:none;
+}
+#np-wire-rest ul li {
+padding-left:0;
+list-style:none;
+background-image:none;
+}
+#below-fold{
+margin-top:0;
+}
+#below-fold .home-entry-header {
+padding: 1.1em 0 0 0;
+}
+#below-fold h1.home-entry-title{
+padding-top:0;
+}
+#below-fold img {
+max-width: 35%;
+}
+#below-fold-left{
+width:95%;
+margin-left:.4em;
+border-right:0;
+}
+#below-fold-left p{
+display:none;
+}
+#below-fold-right{
+display:none;
+}
+article, .page-content{
+width:94%;
+margin-left:2.5%;
+}
+.article-tags, .related{
+display:none;
+}
+.page-content .entry-header {
+width: 97%;
+margin-left: 0;
+}
+.page-content #kicker {
+margin-bottom: 1em;
+margin-right:0;
+margin-left:0;
+width:97%;
+}
+#kicker h3{
+width:97%;
+}
+.entry-header{
+width:100%;
+}
+.entry-content{
+width:100%;
+margin-left:0;
+}
+.entry-content p{
+margin-right:0;
+font-size:1.3em;
+}
+.entry-meta{
+font-size:8px;
+padding-top:1.4em;
+}
+.wp-caption{
+max-width:100%;
+margin-left:0;
+}
+.wp-caption img{
+margin-top:.1em;
+}
+.wp-caption.alignright_long{
+display:none;
+}
+#nav-below {
+font-size: .8em;
+}
+.category_nav {
+margin-left: 2%;
+}
+#colophon{
+padding: 3em 0 1.8em 0;
+font-size: .98em;
+border-top:1px solid #ddd;
+width:94%;
+margin-left:.5em;
+}
+
+/* 320px Max
+-------------------------------------------------------------- */
+@media all and (max-width: 320px) {
+.parent{
+width:93%;
+font-size:.8em;
+display:block;
+}
+#logo{
+margin-left: 20%;
+width: 40%;
+}
+p.about_header{
+display:none;
+}
+}
